@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personas - SOEN 357 Case Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Home</a>
+      <a href="personas.html" class="active">Personas</a>
+      <a href="journey.html">Journey</a>
+      <a href="wireframes.html">Wireframes</a>
+      <a href="usability.html">Usability</a>
+      <a href="reflection.html">Reflection</a>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2 class="section-title">User Research and Persona Creation</h2>
+
+        <div class="persona-grid">
+          <div class="persona-card">
+            <div class="persona-header">
+              <div class="persona-avatar">
+                <img src="images/persona-1.jpg" alt="Persona 1" />
+              </div>
+              <div>
+                <div class="persona-name">Ryan Mitchell</div>
+                <div class="persona-role">Age 35 - Marketing Coordinator</div>
+              </div>
+            </div>
+            <div class="persona-body">
+              <p>Ryan was recently diagnosed with Type 2 Diabetes and is trying to manage his condition through lifestyle changes and strict medication adherence. As a busy marketing coordinator, his daily routine is unpredictable and he struggles to build new health habits around his work schedule.</p>
+              <div class="persona-section-title">Goals</div>
+              <ul>
+                <li>Adhere to his new medication schedule consistently</li>
+                <li>Track his progress over time to stay motivated</li>
+                <li>Keep on top of upcoming doctor appointments</li>
+              </ul>
+              <div class="persona-section-title">Pain Points</div>
+              <ul>
+                <li>Forgets doses during back-to-back meetings or when his routine changes</li>
+                <li>Finds health apps with excessive data entry feel like another chore</li>
+                <li>Struggles to stay engaged with an app long-term without incentives</li>
+              </ul>
+              <div class="persona-section-title">How They Use the App</div>
+              <p style="font-size:0.88rem;">Ryan receives a push notification at set times each day. He confirms his dose with a single tap. He occasionally checks a progress streak to stay motivated, and views his upcoming appointments at a glance from the home screen.</p>
+            </div>
+          </div>
+
+          <div class="persona-card">
+            <div class="persona-header">
+              <div class="persona-avatar">
+                <img src="images/persona-2.jpg" alt="Persona 2" />
+              </div>
+              <div>
+                <div class="persona-name">Helen Nguyen</div>
+                <div class="persona-role">Age 72 - Retired Professor</div>
+              </div>
+            </div>
+            <div class="persona-body">
+              <p>Helen is a retired professor in her early 70s managing multiple chronic conditions. She takes several medications daily and sees her doctor regularly. She primarily uses a tablet and has increased her system font size through accessibility settings, but is not very confident with new apps.</p>
+              <div class="persona-section-title">Goals</div>
+              <ul>
+                <li>Never miss a medication dose or doctor appointment</li>
+                <li>Navigate the app confidently and independently</li>
+                <li>Stay on top of her health without being overwhelmed</li>
+              </ul>
+              <div class="persona-section-title">Pain Points</div>
+              <ul>
+                <li>Small text and cluttered interfaces are hard to read on her tablet</li>
+                <li>Prone to accidental taps and needs to be able to undo mistakes easily</li>
+                <li>Frustrated by elements that appear and disappear unexpectedly</li>
+                <li>Does not want to log things in an app every day, prefers passive reminders</li>
+              </ul>
+              <div class="persona-section-title">How They Use the App</div>
+              <p style="font-size:0.88rem;">Helen receives clear, timely reminders for each medication and appointment. She confirms doses with a single large button. She relies on a consistent, simple navigation structure so she can find her way back if she gets lost. She rarely needs to input anything, the app works mostly in the background.</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="content-block">
+          <div class="content-block">
+            <h3>Existing Research</h3>
+            <p>
+              I did some research first. My goal is to find information about UI/UX design preferences in health apps, and from elderly users as I found the following article from the Government of Canada that says that chronic diseases are more prevalent in older adults:
+              <a href="https://www.canada.ca/en/public-health/services/publications/diseases-conditions/aging-chronic-diseases-profile-canadian-seniors-report.html">Aging and chronic diseases: A profile of Canadian seniors</a>.
+            </p>
+            <h5>
+              First NIH Article
+            </h5>
+            <p>
+              I have found the following article <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11703456/">Exploring digital health: a qualitative study on adults’ experiences with health apps and wearables</a>
+              by the NIH that was a bit insightful. Only a bit because while the article is about health apps, it's more about lifestyle and performance monitoring rather than
+              managing medications and doctor appointments. Although it did provide relevant information:
+            </p>
+            <p>
+              <em>"Participants appreciated hints for improving their health with sustainable, personalized goals. Moreover, gamification features were seen as essential for boosting motivation and enhancing health outcomes, making the experience of using apps and wearables more enjoyable. However, one participant noted that gamification was less important for him since he was already motivated to use the device. Overall, the discussed features were deemed crucial for engaging users and promoting long-term health improvement through apps and wearables."</em>
+            </p>
+            <p>
+              This made me think that gamification could be an interesting feature to explore in my design, as it could help our users take their medication more consistently and stay engaged with their health management. I will consider incorporating gamification elements such as rewards, challenges, or progress tracking to make the app more enjoyable and encourage consistent use.
+            </p>
+            <p>
+              <em>"Participants highlighted the need for simpler graphic interfaces and easier navigation in some apps, as confusion often hindered usability and effectiveness. They expressed a desire for fully customizable interfaces, allowing adjustments to colours, fonts, sizes, and displayed information based on their activities."</em>
+            </p>
+            <p>
+              This wasn't surprising to me. In fact, I don't remember using a website or app that wouldn't let me switch between light or dark mode. And every modern computer and mobile device allows the user to set their preferred font size. So I would make sure to include the different themes in my design.
+            </p>
+            <p>
+              It's important to note that the average age of the participants in this study was 35, which is younger than the typical demographic for chronic health conditions. This means that while the findings provide valuable insights, they may not fully represent the needs and preferences of older adults who are more likely to use an app for managing chronic health conditions.
+            </p>
+            <h5>
+              Second NIH Reasearch Article
+            </h5>
+            <p>
+              This is the second article I found by the NIH: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12303550/">User Experience of Older Adults With an Age-Friendly Transportation Planning E-Tool: Scoping Review</a>.
+              Although this article is about transportation planning rather than health management, it focuses on older adults and their interaction with digital tools, which is relevant to our target users. There were a few things that proved challenging for the older users:
+            </p>
+            <p>
+              <em>"With increased aging, reduced dexterity and lower vision make it difficult to locate the necessary information on the screen or click on the appropriate button, which can impede their experience when planning travels in the community"</em>
+            </p>
+            <p>
+              It's therefore evident that I need to make sure that elements on my UI (such as buttons, text, etc.) are large enough and have sufficient contrast to be easily seen and interacted with by older adults. Which is actually consistent with the findings from the first article about the need for customizable interfaces, which mentioned that users wanted to be able to adjust font sizes and colours. I will make sure to include these features in my design to accommodate the needs of older users.
+            </p>
+            <h5>
+              Nielsen Norman Group Article
+            </h5>
+            <p>
+              Finally, I found this article about UX design for senior citizens: <a href="https://www.nngroup.com/articles/usability-for-senior-citizens/">Usability for Older Adults: Challenges and Changes</a>.
+              I thought that this was interesting:
+            </p>
+            <p>
+              <em>"Older users make more mistakes than younger users do. Study participants often commented on errors, saying “I fat-fingered that one” or “if only I could spell.” (It’s a classic finding in usability research that users blame themselves, but it’s more appropriate for us to assign the blame to bad design that’s insufficiently accommodating of the way real humans behave.) In our studies we often saw users thwarted due to simple query typos and punished for entering hyphens or parentheses in telephone or credit-card numbers."</em>
+            </p>
+            <p>
+              I think that it's therefore important to put guardrails in the UX for these users. Such as confirmation modals for "fat-fingered" actions, forgiving input fields that can handle common or different input formats, and clear error messages that guide users on how to correct their mistakes.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3>Grandparents Interview</h3>
+            <h5>
+              Questions and Answers
+            </h5>
+            <p>
+              These are the questions I asked my grandparents during our interview, along with their (paraphrased) answers. I centered my questions around the previous research. Either to confirm them or to gain even more insights. I ommitted some questions if they didn't provide any useful insights or if they were too similar to other questions.
+            </p>
+            <p>
+              For context, my grandmother is mainly a tablet/mobile user, while my grandfather is a PC user. They are both in their early 80s, one of them take multiple medications daily, and they both visit their doctor regularly.
+            </p>
+            <p>
+              <em>Q: "What makes an app or website feel easy or frustrating to use?"</em>
+            </p>
+            <p>
+              They both very disliked when "things appeared out of nowhere". By that, they not only meant pop-ups, cookies consent forms, or anything like that which is frustrating for anyone.
+              But also UI elements like <a href="https://m2.material.io/components/snackbars">Snackbars</a> as they always tend to dissapear too fast which causes frustration. They also disliked very busy interfaces and tend to prefer simpler UIs with consistant naviguation
+              so they can find they're way back to familiar screens if they get lost.
+            </p>
+            <p>
+              <em>Q: "Have you ever given up on an app because you couldn't figure it out? What happened?"</em>
+            </p>
+            <p>
+              My grandfather told me that he recently tried to buy tickets on Ticketmaster but unfortunately gave up as there was an overwhelming amount of steps, information, choices, and he didn't appreciate the <a href="https://help.ticketmaster.ca/hc/en-us/articles/10263608975121-Why-is-there-a-time-limit-for-checking-out">timer at checkout</a>. 
+            </p>
+            <p>
+              <em>Q: "How do you feel about the text size and colors on screens you use?"</em>
+            </p>
+            <p>
+              They both thought that the default text size on their respective devices was too small and they all used the accessibility features to increase the font size. They both claimed to have never switched between light and dark mode and both stick to default.
+            </p>
+            <p>
+              <em>Q: "Would you use an app or a website to help manage your medication and medical appointments?"</em>
+            </p>
+            <p>
+              They both didn't seem very interested unfortunately. They have their own methods and habits that they've had for years now and adding an app to the mix didn't seem very appealing to them.
+              Although, they said that if their mental capacity were to decline which makes it harder for them to manage their health with their current methods, and the app was convenient enough,
+              they would then be more open to try it. They said that a reminder feature would be interesting, and they also mentioned that they wouldn't like logging something in an app everyday
+              and would like a more hands-off approach where they just get reminded of things and don't have to interact with the app much.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="footer-name">Pascal Ypperciel</p>
+      <p>Student ID: 40210921</p>
+      <p>SOEN 357 - User Interface Design  |  Winter 2026</p>
+      <p style="margin-top:12px; font-size:0.75rem;">Concordia University</p>
+    </div>
+  </footer>
+
+</body>
+</html>

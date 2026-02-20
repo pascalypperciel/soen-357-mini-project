@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireframes - SOEN 357 Case Study</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Home</a>
+      <a href="personas.html">Personas</a>
+      <a href="journey.html">Journey</a>
+      <a href="wireframes.html" class="active">Wireframes</a>
+      <a href="usability.html">Usability</a>
+      <a href="reflection.html">Reflection</a>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2 class="section-title">Wireframing & Prototype Design</h2>
+
+        <div class="content-block">
+          <h3>Initial Sketches</h3>
+          <p>
+            I started the design process with quick hand-drawn sketches. At this stage, I focused more on speed than precision, as the goal was not to create polished visuals but to think through the layout and structure of the app. I mainly asked myself where each piece of information should live on a small screen. There are three core screens: a unified dashboard (Home), a dose confirmation screen (Medications), and an appointment list (Appointments). The dashboard concept came up almost immediately, since both personas needed access to the most important information such as their next dose and next appointment at a glance without having to navigate through multiple screens.
+          </p>
+          <p>
+            Before moving forward, I evaluated the wireframes against both personas. For Ryan, I asked whether he could confirm a dose in a single tap directly from the home screen. The answer was yes, since the primary action button is visible immediately without requiring any scrolling. For Helen, I focused on whether the navigation structure was consistent across all screens. The bottom navigation bar is always present and keeps the same four items in the same order, which provides a stable reference point she can rely on to get back to familiar screens if needed.
+          </p>
+
+          <div style="text-align:center;">
+            <img src="images/wireframe.jpg" alt="Initial hand-drawn wireframe sketches" style="max-width:100%; height:auto; border-radius:8px;" />
+            <p class="img-caption">Initial hand-drawn sketches</p>
+          </div>
+
+          <div style="text-align:center;">
+            <img src="images/wireframe_mid.jpg" alt="Initial hand-drawn wireframe sketches" style="max-width:100%; height:auto; border-radius:8px;" />
+            <p class="img-caption">Mid-fidelity wireframes</p>
+          </div>
+
+        <hr class="divider" />
+
+        <div class="content-block">
+          <h3>Style Guide</h3>
+
+          <div class="sg-section-label">Color Palette</div>
+          <p>
+            I chose a navy, teal, grey, and white color palette because it felt appropriate for a health-focused app while remaining calm and unobtrusive. Navy and grey give the interface a sense of stability and trust, which is important when dealing with medical information, while teal adds a subtle accent that keeps the design from feeling too cold or clinical.
+          </p>
+          <div class="palette-row">
+            <div class="swatch">
+              <div class="swatch-color" style="background:#1a1a2e;"></div>
+              <div class="swatch-label">#1a1a2e<br><strong>Dark Navy</strong><br>Primary - headers, chrome, text</div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background:#2a9d8f;"></div>
+              <div class="swatch-label">#2a9d8f<br><strong>Teal</strong><br>Accent - CTAs, active states</div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background:#edf7f6; border:1px solid #c8e8e4;"></div>
+              <div class="swatch-label">#edf7f6<br><strong>Teal Tint</strong><br>Icon backgrounds, callouts</div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background:#f8f9fa; border:1px solid #e0e0e0;"></div>
+              <div class="swatch-label">#f8f9fa<br><strong>Light Grey</strong><br>Section backgrounds</div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background:#333333;"></div>
+              <div class="swatch-label">#333333<br><strong>Body Text</strong><br>Paragraphs</div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background:#888888;"></div>
+              <div class="swatch-label">#888888<br><strong>Muted Text</strong><br>Captions, secondary info</div>
+            </div>
+            <div class="swatch">
+              <div class="swatch-color" style="background:#c0392b;"></div>
+              <div class="swatch-label">#c0392b<br><strong>Error Red</strong><br>Destructive actions</div>
+            </div>
+          </div>
+
+          <div class="sg-section-label">Typography</div>
+          <p>
+            For typography, I intentionally chose very standard, sans-serif fonts that are clear and easy to read. My priority was legibility rather than stylistic expression, especially considering older users and people who may already rely on accessibility features such as increased text size. Each text style (headers, body text, labels, and buttons) is visually distinct enough through size, weight, and spacing to make the hierarchy clear at a glance, without relying on decorative fonts or excessive contrast. This helps users quickly differentiate between sections, actions, and information while keeping the interface feeling familiar and easy to navigate.          </p>
+          <div class="type-sample">
+            <p style="font-size:1.4rem; font-weight:700; color:#1a1a2e; margin-bottom:4px;">Screen Title - Bold, 22px</p>
+            <p style="font-size:0.72rem; color:#888; margin:0;">-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif</p>
+          </div>
+          <div class="type-sample">
+            <p style="font-size:1rem; font-weight:600; color:#1a1a2e; margin-bottom:4px;">Card Title - SemiBold, 16px</p>
+            <p style="font-size:0.72rem; color:#888; margin:0;">Used for medication names, appointment titles, and section headings</p>
+          </div>
+          <div class="type-sample">
+            <p style="font-size:0.85rem; color:#888; margin-bottom:4px;">Secondary / Caption - Regular, 13.6px</p>
+            <p style="font-size:0.72rem; color:#888; margin:0;">Used for times, dosage notes, doctor specialties, and image captions</p>
+          </div>
+          <div class="type-sample">
+            <p style="font-size:0.7rem; font-weight:700; color:#2a9d8f; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:4px;">SECTION LABEL - Bold, 11.2px, UPPERCASE + LETTER-SPACING</p>
+            <p style="font-size:0.72rem; color:#888; margin:0;">Used for in-screen section dividers such as "Today's Medications" and "Upcoming"</p>
+          </div>
+
+          <div class="sg-section-label">Icon Language</div>
+          <p>
+            Unicode emoji icons are used throughout the app for platform-native rendering without custom icon dependencies. Each icon maps to a consistent semantic meaning.
+          </p>
+          <div class="sg-icon-row">
+            <div class="sg-icon-item">
+              <div class="sg-icon-circle">&#128138;</div>
+              Medications
+            </div>
+            <div class="sg-icon-item">
+              <div class="sg-icon-circle">&#128197;</div>
+              Calendar
+            </div>
+            <div class="sg-icon-item">
+              <div class="sg-icon-circle">&#127968;</div>
+              Home
+            </div>
+            <div class="sg-icon-item">
+              <div class="sg-icon-circle">&#128100;</div>
+              Profile
+            </div>
+            <div class="sg-icon-item">
+              <div class="sg-icon-circle" style="background:#e8f8ee; border-color:#b0e4c0; font-size:1.1rem; color:#2a9d8f;">&#10003;</div>
+              Confirmed
+            </div>
+            <div class="sg-icon-item">
+              <div class="sg-icon-circle" style="background:#fff3e0; border-color:#ffd094;">&#128293;</div>
+              Streak
+            </div>
+          </div>
+
+          <div class="sg-section-label">Animations</div>
+          <p>
+            I deliberately avoided using animations and transient UI elements in the design. While animations can feel engaging, they can also be distracting or confusing, especially for older users who may have slower reaction times or reduced vision. I also chose not to use elements such as snackbars, toasts, or messages that disappear automatically, since they can be easily missed and create unnecessary frustration. Instead, all feedback in the interface is persistent and clearly visible until the user actively dismisses it, which makes interactions feel more predictable and reduces the risk of accidental or misunderstood actions.
+          </p>
+        </div>
+
+        <hr class="divider" />
+
+        <div class="content-block">
+          <h3>Clickable Prototype</h3>
+          <p>
+            The final high-fidelity mockups apply the full visual design language of Health Companion. I used a dark navy colour for the main structural elements such as the status bar, app header, and navigation bar. Teal is used consistently for all interactive and positive-action elements, including confirm buttons, active tabs, the streak badge, and appointment indicators. Content areas use white and light grey to keep the interface readable and uncluttered. For typography, I relied on the system sans-serif font stack to ensure good legibility and a native feel on both iOS and Android. The gamification streak badge is placed in the app header so that it remains visible without becoming distracting.
+          </p>
+          <p>
+            The interactive prototype for Health Companion is represented by the HTML and CSS mockups on this page, which render the full visual design directly in the browser. The five high-fidelity screens shown above cover the main user flows: the home dashboard, dose confirmation, the appointments list, Helen’s accessibility-optimized view, and the undo confirmation modal.
+          </p>
+          <p>
+            The core interaction flow is straightforward: a notification is received, the user opens the app, lands on the home dashboard, taps the confirm button, and the dose is logged. For Helen, an accidental tap on the confirm button triggers an undo confirmation modal rather than immediately logging the dose. Both interaction flows are illustrated in the mockups above.
+          </p>
+          <p>
+            In the final design, every primary action requires exactly one tap. Confirming a dose is done with a single tap on a large teal button. Appointments are visible directly on the home screen without additional navigation. Adding an appointment requires one tap on the call-to-action in the Calendar tab. This one-tap constraint became a core design requirement, as it aligned well with the needs and limitations identified in both personas.
+          </p>
+
+          <div class="proto-wrapper">
+
+            <div class="phone-frame phone-frame--hifi proto-phone">
+              <div class="phone-notch"></div>
+
+              <div class="phone-screen proto-screen proto-screen--active" data-screen="1">
+                <div class="hifi-status-bar">
+                  <div class="hifi-status-dot"></div>
+                  <div class="hifi-status-dot"></div>
+                  <div class="hifi-status-dot"></div>
+                </div>
+                <div class="hifi-app-header">
+                  <div class="hifi-app-header-top">
+                    <div>
+                      <div class="hifi-greeting">Good morning,</div>
+                      <div class="hifi-username">Ryan</div>
+                    </div>
+                    <div class="hifi-avatar-sm"></div>
+                  </div>
+                  <div class="hifi-streak-badge">
+                    <span class="hifi-streak-icon">&#128293;</span>
+                    <span class="hifi-streak-text">7-day streak</span>
+                  </div>
+                </div>
+                <div class="hifi-scroll-area">
+                  <div class="hifi-section-label">Today's Medications</div>
+                  <div class="hifi-card">
+                    <div class="hifi-card-icon hifi-card-icon--teal">&#128138;</div>
+                    <div class="hifi-card-text">
+                      <div class="hifi-card-title">Metformin 500mg</div>
+                      <div class="hifi-card-sub">8:00 AM &middot; With food</div>
+                    </div>
+                    <div class="hifi-card-check"></div>
+                  </div>
+                  <div class="hifi-card">
+                    <div class="hifi-card-icon hifi-card-icon--navy">&#128138;</div>
+                    <div class="hifi-card-text">
+                      <div class="hifi-card-title">Vitamin D 1000IU</div>
+                      <div class="hifi-card-sub">8:00 AM &middot; Taken</div>
+                    </div>
+                    <div class="hifi-card-check hifi-card-check--done">&#10003;</div>
+                  </div>
+                  <div class="hifi-section-label">Next Appointment</div>
+                  <div class="hifi-appt-row">
+                    <div class="hifi-appt-date">
+                      <div class="hifi-appt-day-num">3</div>
+                      <div class="hifi-appt-day-name">MAR</div>
+                    </div>
+                    <div class="hifi-appt-info">
+                      <div class="hifi-appt-title">Dr. Chen</div>
+                      <div class="hifi-appt-sub">Endocrinology &middot; 10:30 AM</div>
+                    </div>
+                    <div class="hifi-appt-dot"></div>
+                  </div>
+                </div>
+                <div class="hifi-big-btn proto-tap" onclick="goToScreen(2)">
+                  <div class="hifi-big-btn-text">Mark Metformin as Taken</div>
+                </div>
+                <div class="hifi-bottom-nav">
+                  <div class="hifi-nav-item">
+                    <div class="hifi-nav-icon hifi-nav-icon--active"></div>
+                    <div class="hifi-nav-label hifi-nav-label--active">Home</div>
+                  </div>
+                  <div class="hifi-nav-item proto-tap" onclick="goToScreen(2)">
+                    <div class="hifi-nav-icon"></div>
+                    <div class="hifi-nav-label">Meds</div>
+                  </div>
+                  <div class="hifi-nav-item proto-tap" onclick="goToScreen(3)">
+                    <div class="hifi-nav-icon"></div>
+                    <div class="hifi-nav-label">Calendar</div>
+                  </div>
+                  <div class="hifi-nav-item proto-tap" onclick="goToScreen(4)">
+                    <div class="hifi-nav-icon"></div>
+                    <div class="hifi-nav-label">Profile</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phone-screen proto-screen" data-screen="2">
+                <div class="hifi-status-bar">
+                  <div class="hifi-status-dot"></div>
+                  <div class="hifi-status-dot"></div>
+                  <div class="hifi-status-dot"></div>
+                </div>
+                <div class="hifi-app-header">
+                  <div class="hifi-header-center">
+                    <div class="hifi-header-title">Medications</div>
+                  </div>
+                </div>
+                <div class="hifi-pill-icon-wrap">
+                  <div class="hifi-pill-icon-circle">&#128138;</div>
+                </div>
+                <div class="hifi-med-name">Metformin 500mg</div>
+                <div class="hifi-med-sub">Take 1 tablet with food &middot; 8:00 AM</div>
+                <div class="hifi-big-btn proto-tap" onclick="goToScreen(1)">
+                  <div class="hifi-big-btn-text">CONFIRM TAKEN</div>
+                </div>
+                <div class="hifi-outline-btn">
+                  <div class="hifi-outline-btn-text">Remind me in 15 min</div>
+                </div>
+                <div class="hifi-scroll-area" style="padding-top:4px;">
+                  <div class="hifi-section-label">Today's Schedule</div>
+                  <div class="hifi-card">
+                    <div class="hifi-card-icon hifi-card-icon--teal">&#128138;</div>
+                    <div class="hifi-card-text">
+                      <div class="hifi-card-title">Metformin 500mg</div>
+                      <div class="hifi-card-sub">8:00 AM</div>
+                    </div>
+                    <div class="hifi-card-check"></div>
+                  </div>
+                  <div class="hifi-card">
+                    <div class="hifi-card-icon hifi-card-icon--navy">&#128138;</div>
+                    <div class="hifi-card-text">
+                      <div class="hifi-card-title">Metformin 500mg</div>
+                      <div class="hifi-card-sub">6:00 PM</div>
+                    </div>
+                    <div class="hifi-card-check"></div>
+                  </div>
+                </div>
+                <div class="hifi-bottom-nav">
+                  <div class="hifi-nav-item proto-tap" onclick="goToScreen(1)">
+                    <div class="hifi-nav-icon"></div>
+                    <div class="hifi-nav-label">Home</div>
+                  </div>
+                  <div class="hifi-nav-item">
+                    <div class="hifi-nav-icon hifi-nav-icon--active"></div>
+                    <div class="hifi-nav-label hifi-nav-label--active">Meds</div>
+                  </div>
+                  <div class="hifi-nav-item proto-tap" onclick="goToScreen(3)">
+                    <div class="hifi-nav-icon"></div>
+                    <div class="hifi-nav-label">Calendar</div>
+                  </div>
+                  <div class="hifi-nav-item proto-tap" onclick="goToScreen(4)">
+                    <div class="hifi-nav-icon"></div>
+                    <div class="hifi-nav-label">Profile</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phone-screen proto-screen" data-screen="3">
+                <div class="hifi-status-bar">
+                  <div class="hifi-status-dot"></div>
+                  <div class="hifi-status-dot"></div>
+                  <div class="hifi-status-dot"></div>
+                </div>
+                <div class="hifi-app-header">
+                  <div class="hifi-header-center">
+                    <div class="hifi-header-title">Appointments</div>
+                  </div>
+                </div>
+                <div class="hifi-scroll-area">
+                  <div class="hifi-section-label">Upcoming</div>
+                  <div class="hifi-appt-row">
+                    <div class="hifi-appt-date">
+                      <div class="hifi-appt-day-num">3</div>
+                      <div class="hifi-appt-day-name">MAR</div>
+                    </div>
+                    <div class="hifi-appt-info">
+                      <div class="hifi-appt-title">Dr. Chen</div>
+                      <div class="hifi-appt-sub">Endocrinology &middot; 10:30 AM</div>
+                    </div>
+                    <div class="hifi-appt-dot"></div>
+                  </div>
+                  <div class="hifi-appt-row">
+                    <div class="hifi-appt-date">
+                      <div class="hifi-appt-day-num">17</div>
+                      <div class="hifi-appt-day-name">MAR</div>
+                    </div>
+                    <div class="hifi-appt-info">
+                      <div class="hifi-appt-title">Dr. Patel</div>
+                      <div class="hifi-appt-sub">General Practice &middot; 2:00 PM</div>
+                    </div>
+                    <div class="hifi-appt-dot"></div>
+                  </div>
+                  <div class="hifi-appt-row">
+                    <div class="hifi-appt-date">
+                      <div class="hifi-appt-day-num">2</div>
+                      <div class="hifi-appt-day-name">APR</div>
+                    </div>
+                    <div class="hifi-appt-info">
+                      <div class="hifi-appt-title">Lab - Blood Work</div>
+                      <div class="hifi-appt-sub">9:00 AM &middot; Fasting required</div>
+                    </div>
+                    <div class="hifi-appt-dot"></div>
+                  </div>
+                  <div class="hifi-section-label">Past</div>
+                  <div class="hifi-appt-row hifi-appt-row--muted">
+                    <div class="hifi-appt-date">
+                      <div class="hifi-appt-day-num">10</div>
+                      <div class="hifi-appt-day-name">FEB</div>
+                    </div>
+                    <div class="hifi-appt-info">
+                      <div class="hifi-appt-title">Dr. Chen</div>
+                      <div class="hifi-appt-sub">Endocrinology &middot; 11:00 AM</div>
+                    </div>
+                    <div class="hifi-appt-dot hifi-appt-dot--muted"></div>
+                  </div>
+                </div>
+                <div class="hifi-big-btn">
+                  <div class="hifi-big-btn-text">+ Add Appointment</div>
+                </div>
+                <div class="hifi-bottom-nav">
+                  <div class="hifi-nav-item proto-tap" onclick="goToScreen(1)">
+                    <div class="hifi-nav-icon"></div>
+                    <div class="hifi-nav-label">Home</div>
+                  </div>
+                  <div class="hifi-nav-item proto-tap" onclick="goToScreen(2)">
+                    <div class="hifi-nav-icon"></div>
+                    <div class="hifi-nav-label">Meds</div>
+                  </div>
+                  <div class="hifi-nav-item">
+                    <div class="hifi-nav-icon hifi-nav-icon--active"></div>
+                    <div class="hifi-nav-label hifi-nav-label--active">Calendar</div>
+                  </div>
+                  <div class="hifi-nav-item proto-tap" onclick="goToScreen(4)">
+                    <div class="hifi-nav-icon"></div>
+                    <div class="hifi-nav-label">Profile</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phone-screen proto-screen" data-screen="4">
+                <div class="hifi-status-bar">
+                  <div class="hifi-status-dot"></div>
+                  <div class="hifi-status-dot"></div>
+                  <div class="hifi-status-dot"></div>
+                </div>
+                <div class="hifi-app-header">
+                  <div class="hifi-app-header-top">
+                    <div>
+                      <div class="hifi-greeting" style="font-size:6.5px;">Good morning,</div>
+                      <div class="hifi-username" style="font-size:9.5px;">Helen</div>
+                    </div>
+                    <div style="display:flex; gap:3px; align-items:center;">
+                      <div class="hifi-badge-chip">Aa</div>
+                      <div class="hifi-avatar-sm"></div>
+                    </div>
+                  </div>
+                  <div class="hifi-streak-badge">
+                    <span class="hifi-streak-icon">&#128293;</span>
+                    <span class="hifi-streak-text" style="font-size:6.5px;">12-day streak</span>
+                  </div>
+                </div>
+                <div class="hifi-scroll-area">
+                  <div class="hifi-section-label" style="font-size:6px;">Today's Medications</div>
+                  <div class="hifi-card" style="padding: 7px 5px;">
+                    <div class="hifi-card-icon hifi-card-icon--teal" style="width:20px; height:20px; font-size:10px;">&#128138;</div>
+                    <div class="hifi-card-text">
+                      <div class="hifi-card-title" style="font-size:7.5px;">Amlodipine 5mg</div>
+                      <div class="hifi-card-sub" style="font-size:6px;">9:00 AM &middot; With water</div>
+                    </div>
+                    <div class="hifi-card-check" style="width:16px; height:16px;"></div>
+                  </div>
+                  <div class="hifi-section-label" style="font-size:6px;">Next Appointment</div>
+                  <div class="hifi-appt-row" style="padding: 6px 5px;">
+                    <div class="hifi-appt-date" style="width:22px;">
+                      <div class="hifi-appt-day-num" style="font-size:9px;">7</div>
+                      <div class="hifi-appt-day-name" style="font-size:5px;">MAR</div>
+                    </div>
+                    <div class="hifi-appt-info">
+                      <div class="hifi-appt-title" style="font-size:7px;">Dr. L&eacute;vesque</div>
+                      <div class="hifi-appt-sub" style="font-size:5.5px;">Cardiology &middot; 2:00 PM</div>
+                    </div>
+                    <div class="hifi-appt-dot"></div>
+                  </div>
+                </div>
+                <div class="hifi-big-btn proto-tap" style="padding:9px 8px;" onclick="goToScreen(5)">
+                  <div class="hifi-big-btn-text" style="font-size:7px;">Mark Amlodipine as Taken</div>
+                </div>
+                <div class="hifi-bottom-nav" style="height:28px;">
+                  <div class="hifi-nav-item">
+                    <div class="hifi-nav-icon hifi-nav-icon--active" style="width:12px; height:12px;"></div>
+                    <div class="hifi-nav-label hifi-nav-label--active" style="font-size:5px;">Home</div>
+                  </div>
+                  <div class="hifi-nav-item proto-tap" onclick="goToScreen(2)">
+                    <div class="hifi-nav-icon" style="width:12px; height:12px;"></div>
+                    <div class="hifi-nav-label" style="font-size:5px;">Meds</div>
+                  </div>
+                  <div class="hifi-nav-item proto-tap" onclick="goToScreen(3)">
+                    <div class="hifi-nav-icon" style="width:12px; height:12px;"></div>
+                    <div class="hifi-nav-label" style="font-size:5px;">Calendar</div>
+                  </div>
+                  <div class="hifi-nav-item">
+                    <div class="hifi-nav-icon" style="width:12px; height:12px;"></div>
+                    <div class="hifi-nav-label" style="font-size:5px;">Profile</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phone-screen proto-screen" data-screen="5" style="position:relative;">
+                <div class="hifi-status-bar">
+                  <div class="hifi-status-dot"></div>
+                  <div class="hifi-status-dot"></div>
+                  <div class="hifi-status-dot"></div>
+                </div>
+                <div class="hifi-app-header">
+                  <div class="hifi-app-header-top">
+                    <div>
+                      <div class="hifi-greeting">Good morning,</div>
+                      <div class="hifi-username">Helen</div>
+                    </div>
+                    <div class="hifi-avatar-sm"></div>
+                  </div>
+                  <div class="hifi-streak-badge">
+                    <span class="hifi-streak-icon">&#128293;</span>
+                    <span class="hifi-streak-text">12-day streak</span>
+                  </div>
+                </div>
+                <div class="hifi-scroll-area">
+                  <div class="hifi-section-label">Today's Medications</div>
+                  <div class="hifi-card">
+                    <div class="hifi-card-icon hifi-card-icon--teal">&#128138;</div>
+                    <div class="hifi-card-text">
+                      <div class="hifi-card-title">Amlodipine 5mg</div>
+                      <div class="hifi-card-sub">9:00 AM &middot; Taken</div>
+                    </div>
+                    <div class="hifi-card-check hifi-card-check--done">&#10003;</div>
+                  </div>
+                </div>
+                <div class="hifi-modal-overlay">
+                  <div class="hifi-modal">
+                    <div class="hifi-modal-title">Undo marking Amlodipine as taken?</div>
+                    <div class="hifi-modal-btn hifi-modal-btn--teal proto-tap" onclick="goToScreen(4)">Yes, Undo</div>
+                    <div class="hifi-modal-btn hifi-modal-btn--outline proto-tap" onclick="goToScreen(4)">Cancel</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="proto-label-wrap">
+              <span class="proto-label" id="proto-label">Home Dashboard</span>
+            </div>
+
+            <div class="proto-dots">
+              <button class="proto-dot proto-dot--active" data-target="1" title="Home Dashboard"></button>
+              <button class="proto-dot" data-target="2" title="Medication Confirmation"></button>
+              <button class="proto-dot" data-target="3" title="Appointments"></button>
+              <button class="proto-dot" data-target="4" title="Helen - Accessible View"></button>
+              <button class="proto-dot" data-target="5" title="Undo Confirmation Modal"></button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="footer-name">Pascal Ypperciel</p>
+      <p>Student ID: 40210921</p>
+      <p>SOEN 357 - User Interface Design  |  Winter 2026</p>
+      <p style="margin-top:12px; font-size:0.75rem;">Concordia University</p>
+    </div>
+  </footer>
+
+  <script>
+    var PROTO_LABELS = {
+      1: 'Home Dashboard',
+      2: 'Medication Confirmation',
+      3: 'Appointments',
+      4: 'Helen - Accessible View',
+      5: 'Undo Confirmation Modal'
+    };
+
+    function goToScreen(n) {
+      document.querySelectorAll('.proto-screen').forEach(function(s) {
+        s.classList.remove('proto-screen--active');
+      });
+      document.querySelectorAll('.proto-dot').forEach(function(d) {
+        d.classList.remove('proto-dot--active');
+      });
+      var screen = document.querySelector('.proto-screen[data-screen="' + n + '"]');
+      var dot    = document.querySelector('.proto-dot[data-target="' + n + '"]');
+      if (screen) screen.classList.add('proto-screen--active');
+      if (dot)    dot.classList.add('proto-dot--active');
+      var label = document.getElementById('proto-label');
+      if (label)  label.textContent = PROTO_LABELS[n] || '';
+    }
+
+    document.querySelectorAll('.proto-dot').forEach(function(dot) {
+      dot.addEventListener('click', function() { goToScreen(+dot.dataset.target); });
+    });
+  </script>
+</body>
+</html>
